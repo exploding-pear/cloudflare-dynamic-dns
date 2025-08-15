@@ -21,8 +21,8 @@ for record in dns_records:
         payload = {
             "content": f"{public_ip}",
             "name": f"{record['name']}",
-            "proxied": True,
-            "type": "A",
+            "proxied": f"{record['proxied']}",
+            "type": f"{record['type']}",
             "comment": f'last updated {datetime.datetime.now()}',
             "ttl": 1
         }
